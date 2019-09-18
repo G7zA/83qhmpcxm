@@ -12,9 +12,9 @@
                  <!-- 手机号 绑定 v-model -->
                  <el-input v-model="loginForm.mobile" placeholder="请输入手机号"></el-input>
              </el-form-item>
-             <el-form-item  prop="yzm">
+             <el-form-item  prop="code">
                  <!-- 验证码 -->
-                 <el-input v-model="loginForm.yzm" placeholder="请输入验证码" style="width:65%"></el-input>
+                 <el-input v-model="loginForm.code" placeholder="请输入验证码" style="width:65%"></el-input>
                  <!-- 发送验证码 -->
                  <el-button  style="float:right">发送验证码</el-button>
              </el-form-item>
@@ -25,7 +25,7 @@
               <el-form-item>
                   <!-- 登录按钮 -->
                   <!-- 注册点击事件 -->
-                  <el-button type="primary" style="width:100%">登录</el-button>
+                  <el-button  @click="login" type="primary" style="width:100%">登录</el-button>
               </el-form-item>
          </el-form>
       </el-card>
@@ -45,7 +45,7 @@ export default {
     return {
       loginForm: {
         mobile: '', // 手机号
-        yzm: '', // 验证码
+        code: '', // 验证码
         agreen: 'false' // 是否同意协议
       },
       loginGz: {
@@ -58,6 +58,33 @@ export default {
           { pattern: /^\d{6}$/, message: '验证码为6位数字' }],
         agreen: [{ validator }] // 自定义形式去校验
       }
+    }
+  },
+  methods: {
+    login () { // 校验整个表单的规则
+      // validate 是一个方法 => 方法中传入的一个函数 两个校验参数  是否校验成功/未校验成功的字段
+      this.$refs.myForm.validate((isOK) => {
+        if (isOK) {
+          console.log(this.loginForm)
+
+          // 只有一切的校验通过之后 才会进行请求
+          this.$axios({
+            method: 'post',
+            url: '/authorizations',
+            data: this.loginForm
+          }).then(result => {
+            // 将后台返回的token令牌存储到前端缓存中
+            window.localStorage.setItem('user-token', result.data.data.token)
+            this.$router.push('/home') // 跳转到主页
+          }).catch(() => {
+            // 提示消息
+            this.$message({
+              type: 'warning',
+              message: '您的手机号或者验证码输入错误'
+            })
+          })
+        }
+      })
     }
   }
 }
