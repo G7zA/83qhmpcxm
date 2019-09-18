@@ -1,6 +1,7 @@
 <template>
   <div class="login">
-      我是登录页面</div>
+
+      </div>
 </template>
 
 <script>
@@ -9,13 +10,12 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
+//如果加了scoped
 .login{
     background-image: url('../../assets/img/login_bg.jpg');
-    height: 100%;
+    height: 100vh;
     background-size: cover;
-    span{
-        color:red
-    }
+
 }
 </style>
