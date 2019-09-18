@@ -10,7 +10,7 @@ export default new Router({
     // 一级路由
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/home'
     },
     {
       path: '/home',
