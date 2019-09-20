@@ -8,7 +8,7 @@ import './styles/index.less'
 axios.defaults.baseURL = 'http://ttapi.research.itcast.cn/mp/v1_0' // 将地址的常态值设置给baseUrl
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
-Vue.use(ElementUI)
+Vue.use(ElementUI) // 相当于全局注册elementUI
 new Vue({
   router,
   render: h => h(App)

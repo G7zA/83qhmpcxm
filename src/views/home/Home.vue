@@ -4,12 +4,14 @@
     <!-- 先放置一个左侧 -->
     <el-aside>
       <!-- 左侧导航组件 -->
-<left-leftDh></left-leftDh>
+<left-leftdh></left-leftdh>
     </el-aside>
     <!-- 右侧大容器 -->
     <el-container>
       <!-- 头部 -->
-      <el-header>头部</el-header>
+      <el-header>
+        <right-header></right-header>
+      </el-header>
       <!-- 中部区域 -->
       <el-main>
         <!-- 二级路由容器 -->
@@ -20,10 +22,12 @@
 </template>
 
 <script>
-import leftDh from '../../components/left/left-Dh'
+import leftDh from '../../components/left/left-dh'
+import rightHeader from '../../components/header/right-header'
 export default {
   components: {
-    'left-leftDh': leftDh
+    'left-leftdh': leftDh,
+    'right-header': rightHeader
   }
 }
 </script>

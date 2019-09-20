@@ -10,7 +10,6 @@
         <i class="el-icon-s-home"></i>
         <span slot="title">首页</span>
       </el-menu-item>
-
       <!-- 内容管理  -->
       <el-submenu index="1">
         <!-- el-submenu 插槽 title  一级显示内容为内容管理 -->

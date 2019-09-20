@@ -35,6 +35,7 @@
 <script>
 export default {
   data () {
+    // 自定义校验 自定义函数 三个参数
     let validator = (rule, value, callback) => {
       // rule当前规则
       // value当前表单项目的值
@@ -49,7 +50,7 @@ export default {
         agreen: 'false' // 是否同意协议
       },
       loginGz: {
-        // 决定校验规则 一个对象就是一个加盐规则
+        // 决定校验规则 一个对象就是一个校验规则
         // key（字段名）:value（对象数组）的形式
         // required 为true 就表示该字段必填 如果不填 就会提示消息
         mobile: [{ required: true, message: '请输入您的手机号' },
@@ -61,7 +62,7 @@ export default {
     }
   },
   methods: {
-    login () { // 校验整个表单的规则
+    login () { // 手动校验整个表单的规则
       // validate 是一个方法 => 方法中传入的一个函数 两个校验参数  是否校验成功/未校验成功的字段
       this.$refs.myForm.validate((isOK) => {
         if (isOK) {
