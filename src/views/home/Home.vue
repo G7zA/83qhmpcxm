@@ -2,9 +2,9 @@
 <!-- 先定义一个大容器 -->
  <el-container>
     <!-- 先放置一个左侧 -->
-    <el-aside>
+    <el-aside style="width:200px">
       <!-- 左侧导航组件 -->
-<left-leftdh></left-leftdh>
+<left-leftDh></left-leftDh>
     </el-aside>
     <!-- 右侧大容器 -->
     <el-container>
@@ -26,7 +26,7 @@ import leftDh from '../../components/left/left-dh'
 import rightHeader from '../../components/header/right-header'
 export default {
   components: {
-    'left-leftdh': leftDh,
+    'left-leftDh': leftDh,
     'right-header': rightHeader
   }
 }
