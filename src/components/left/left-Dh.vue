@@ -1,6 +1,6 @@
 <template>
   <div class="left-dh">
-    <div>
+    <div style="padding:15px 10px">
       <img src="../../assets/img/logo_admin.png" alt />
     </div>
     <el-menu style="width:201px;" background-color="#353b4b" text-color="#adafb5" active-text-color="#ffd04b">
@@ -50,9 +50,11 @@
 
 <script>
 // 左侧导航组件
-export default {}
+export default {
+
+}
 </script>
-<style>
+<style lang="less" scoped>
 .left-dh {
   background-color: #323745;
   width: 200px;
