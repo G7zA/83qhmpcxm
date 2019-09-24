@@ -12,6 +12,7 @@
       <el-header>
         <right-header></right-header>
       </el-header>
+
       <!-- 中部区域 -->
       <el-main>
         <!-- 二级路由容器 -->
