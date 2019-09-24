@@ -59,7 +59,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .left-dh {
-  background-color: #323745;
+  // background-color: #323745;
   width: 200px;
   height: 100vh;
 }
