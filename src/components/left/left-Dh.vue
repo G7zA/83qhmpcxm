@@ -37,7 +37,7 @@
         </template>
         <!-- 二级内容 -->
         <el-menu-item index="/home/gradata">图文数据</el-menu-item>
-        <el-menu-item index="/homefanpro">粉丝概括</el-menu-item>
+        <el-menu-item index="/home/fanpro">粉丝概括</el-menu-item>
         <el-menu-item index="/home/pic">粉丝画像</el-menu-item>
         <el-menu-item index="/home/list">粉丝列表</el-menu-item>
       </el-submenu>

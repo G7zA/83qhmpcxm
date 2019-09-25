@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from './permission'
 import ElementUI from 'element-ui'
 import Component from './components/index' // 引入插件对象
 // import quillEditor from 'vue-quill-editor' // 引入富文本编辑器
