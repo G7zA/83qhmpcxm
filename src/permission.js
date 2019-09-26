@@ -2,8 +2,9 @@
 import router from './router'
 // 全局前置守卫
 router.beforeEach((to, from, next) => {
-//   首先判断拦截范围 （home以及他下的二级路由拦截）
-// to去到的就是路由对象 他当中有path属性
+//   debugger
+  //   首先判断拦截范围 （home以及他下的二级路由拦截）
+  // to去到的就是路由对象 他当中有path属性
   if (to.path.startsWith('/home')) {
     //   进入了拦截范围
     // 判断是否登录 有token 就登录 没token就没登录

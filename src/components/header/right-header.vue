@@ -41,10 +41,10 @@ export default {
   methods: {
     // 获取用户个人资料
     getUserInfo () {
-      let token = window.localStorage.getItem('user-token') // 从前端缓存中获取token
+      // let token = window.localStorage.getItem('user-token') // 从前端缓存中获取token
       this.$axios({
-        url: '/user/profile',
-        headers: { 'Authorization': `Bearer ${token} ` } // 请求参数
+        url: '/user/profile'
+        // headers: { 'Authorization': `Bearer ${token} ` } // 请求参数 因为统一注入token 所以这里就不需要再写了
       }).then(result => {
         this.userInfo = result.data.data // 接送数据对象
       })

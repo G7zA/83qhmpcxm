@@ -67,7 +67,7 @@ export default {
       this.$refs.myForm.validate((isOK) => {
         if (isOK) {
           console.log(this.loginForm)
-
+          debugger
           // 只有一切的校验通过之后 才会进行请求
           this.$axios({
             method: 'post',
