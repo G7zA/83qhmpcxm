@@ -46,7 +46,9 @@ export default {
         url: '/user/profile'
         // headers: { 'Authorization': `Bearer ${token} ` } // 请求参数 因为统一注入token 所以这里就不需要再写了
       }).then(result => {
-        this.userInfo = result.data.data // 接送数据对象
+        // debugger
+        // this.userInfo = result.data.data // 接送数据对象
+        this.userInfo = result.data // 接送数据对象
       })
     },
     // 公共点击事件
